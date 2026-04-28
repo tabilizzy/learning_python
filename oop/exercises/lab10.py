@@ -1,9 +1,6 @@
 from datetime import datetime, timedelta
 
-
-# ========================
 # Book Class
-# ========================
 class Book:
     def __init__(self, title, author, isbn):
         self.title = title
@@ -11,11 +8,11 @@ class Book:
         self.isbn = isbn
         self._is_available = True  # private-like
 
-    @property
+    
     def is_available(self):
         return self._is_available
 
-    @is_available.setter
+
     def is_available(self, value):
         if not isinstance(value, bool):
             raise ValueError("Availability must be True or False")
@@ -29,9 +26,9 @@ class Book:
         return isinstance(other, Book) and self.isbn == other.isbn
 
 
-# ========================
+
 # Member Class
-# ========================
+
 class Member:
     def __init__(self, member_id, name):
         self.member_id = member_id
@@ -64,9 +61,9 @@ class Member:
         return f"{self.member_id} - {self.name}"
 
 
-# ========================
+
 # Library Class (Composition)
-# ========================
+
 class Library:
     def __init__(self):
         self.books = {}      # isbn -> Book
@@ -137,9 +134,9 @@ class Library:
             print("No overdue books.")
 
 
-# ========================
+
 # Main Program
-# ========================
+
 library = Library()
 
 while True:

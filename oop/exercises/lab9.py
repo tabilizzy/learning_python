@@ -115,15 +115,13 @@ def show_low_stock():
         print(name)
 
 
-# ========================
+
 # Menu Loop
-# ========================
 
+print("***************************************************")
+print("Welcome To Our Market Stall Inventory System ")
+print("***************************************************")
 while True:
-    print("***************************************************")
-    print("Welcome To Our Market Stall Inventory System ")
-    print("***************************************************")
-
     print("""
     1. Add new product
     2. Sell product
